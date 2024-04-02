@@ -1,0 +1,28 @@
+void setup() {
+ Serial.begin(9600); // put your setup code here, to run once:
+Serial.println("welcome");
+pinMode(13, INPUT_PULLUP);
+pinMode(7, OUTPUT);
+pinMode(8, OUTPUT);
+pinMode(9, OUTPUT);
+pinMode(10, OUTPUT);
+pinMode(11, OUTPUT);
+pinMode(12, OUTPUT);
+}
+
+void loop() {
+ Serial.println("roll:"); // put your main code here, to run repeatedly:
+while(true)
+{
+  if(digitalRead(13)==0)
+    {
+      break;
+    }
+  }
+  int x=random(1,6);
+  Serial.println("output=");
+  Serial.println(x);
+  digitalWrite(x+6, HIGH);
+  delay(1000);
+   digitalWrite(x+6, LOW);
+}
